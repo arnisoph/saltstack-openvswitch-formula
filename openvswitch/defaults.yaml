@@ -1,0 +1,8 @@
+{% load_yaml as rawmap %}
+Debian:
+  pkgs:
+    - openvswitch-datapath-dkms
+    - openvswitch-switch
+  bridgeutils:
+    pkg: bridge-utils
+{% endload %}
