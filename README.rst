@@ -12,7 +12,7 @@ NOTICE BEFORE YOU USE
 TODO
 ====
 
-* make this formula work with OpenNebula (contributions for OpenStack are welcome)
+* make this formula work with OpenNebula (contributions for OpenStack support are welcome)
 
 Instructions
 ============
