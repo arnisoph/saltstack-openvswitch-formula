@@ -2,6 +2,7 @@
 Debian:
   pkgs:
     - openvswitch-datapath-dkms
+    - linux-headers-{{ salt['grains.get']('kernelrelease') }} #TODO move this to linux-formula
     - openvswitch-switch
   bridgeutils:
     pkg: bridge-utils
