@@ -17,6 +17,11 @@ remove-bridgeutils:
     - removed
     - name: {{ datamap.bridgeutils.pkg }}
 
+unload-bridge-kmod:
+  kmod:
+    - absent
+    - name: bridge
+
 openvswitch:
   pkg:
     - installed
