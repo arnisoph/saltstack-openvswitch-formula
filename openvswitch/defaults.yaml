@@ -2,7 +2,7 @@
 Debian:
   pkgs:
     - openvswitch-datapath-dkms
-    - linux-headers-{{ salt['grains.get']('kernelrelease') }} #TODO move this to linux-formula
+    - linux-headers-{{ salt['grains.get']('kernelrelease') }} #TODO move this to linux-formula
     - openvswitch-switch
   repo: {}
   bridgeutils:
@@ -10,7 +10,7 @@ Debian:
 RedHat:
   pkgs:
     - openvswitch-datapath-dkms
-    - linux-headers-{{ salt['grains.get']('kernelrelease') }} #TODO move this to linux-formula
+    - linux-headers-{{ salt['grains.get']('kernelrelease') }} #TODO move this to linux-formula
     - openvswitch-switch
   repo: {}
   bridgeutils:
