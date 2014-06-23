@@ -1,7 +1,9 @@
+#!jinja|yaml
+
 {% from "openvswitch/defaults.yaml" import rawmap with context %}
 {% set datamap = salt['grains.filter_by'](rawmap, merge=salt['pillar.get']('openvswitch:lookup')) %}
 
-{% if datamap.repo.manage|default(False) == True %}
+{% if datamap.repo.manage|default(False) %}
   {% if salt['grains.get']('os_family') == 'Debian' %}
 openvswitch_repo:
   pkgrepo:
