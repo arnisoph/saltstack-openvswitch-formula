@@ -14,12 +14,12 @@ openvswitch_repo:
   {% endif %}
 {% endif %}
 
-remove-bridgeutils:
+remove_bridgeutils:
   pkg:
     - removed
     - name: {{ datamap.bridgeutils.pkg }}
 
-unload-bridge-kmod:
+unload_bridge_kmod:
   kmod:
     - absent
     - name: bridge
@@ -27,8 +27,4 @@ unload-bridge-kmod:
 openvswitch:
   pkg:
     - installed
-    - pkgs:
-{% for p in datamap.pkgs %}
-      - {{ p }}
-{% endfor %}
-
+    - pkgs: {{ datamap.pkgs }}
