@@ -31,7 +31,6 @@ Available states
 
 ``openvswitch``
 ---------------
-
 Basic setup of Open vSwitch
 
 Additional resources

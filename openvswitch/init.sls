@@ -10,7 +10,9 @@ openvswitch_repo:
     - managed
     - name: deb {{ datamap.repo.url }} {{ datamap.repo.dist }} {{ datamap.repo.comps }}
     - file: /etc/apt/sources.list.d/openvswitch.list
+    {% if 'keyurl' in datamap.repo %}
     - key_url: {{ datamap.repo.keyurl }}
+    {% endif %}
   {% endif %}
 {% endif %}
 
